@@ -1,29 +1,7 @@
-/* Layout */
-/* Colours */
-/* Breakpoints */
-.container {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: auto;
-  max-width: 1100px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.site-main {
-  display: block;
-}
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
-/* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Based on the normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
 	 ========================================================================== */
 /**
@@ -447,12 +425,6 @@ table {
   width: 100%;
 }
 /*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
 :focus,
@@ -460,143 +432,9 @@ a:focus,
 .focus {
   outline-color: #CC4B00;
 }
-/*--------------------------------------------------------------
-## Menus
---------------------------------------------------------------*/
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%;
-}
-.main-navigation ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-.main-navigation ul ul {
-  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 100%;
-  left: -999em;
-  z-index: 99999;
-}
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
-}
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-  left: 100%;
-}
-.main-navigation ul ul a {
-  width: 200px;
-}
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-  left: auto;
-}
-.main-navigation li {
-  float: left;
-  position: relative;
-}
-.main-navigation a {
-  display: block;
-  text-decoration: none;
-}
-/* Small menu. */
-@media screen and (min-width: 600px) {
-  .menu-toggle {
-    display: none;
-  }
-  .main-navigation ul {
-    display: block;
-  }
-}
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden;
-}
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%;
-}
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%;
-}
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
-/* Text meant only for screen readers. */
-.screen-reader-text {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute !important;
-  width: 1px;
-  word-wrap: normal !important;
-  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
-}
-.screen-reader-text:focus {
-  background-color: #f1f1f1;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-          box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-  clip: auto !important;
-  -webkit-clip-path: none;
-          clip-path: none;
-  color: #21759b;
-  display: block;
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-weight: bold;
-  height: auto;
-  left: 5px;
-  line-height: normal;
-  padding: 15px 23px 14px;
-  text-decoration: none;
-  top: 5px;
-  width: auto;
-  z-index: 100000;
-  /* Above WP toolbar. */
-}
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
   outline: 0;
-}
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-.alignleft {
-  display: inline;
-  float: left;
-  margin-right: 1.5em;
-}
-.alignright {
-  display: inline;
-  float: right;
-  margin-left: 1.5em;
-}
-.aligncenter {
-  clear: both;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 /*--------------------------------------------------------------
 # Clearings
@@ -626,73 +464,13 @@ a:focus,
   clear: both;
 }
 /*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-.widget {
-  margin: 0 0 1.5em;
-  /* Make sure select elements fit in widgets. */
-}
-.widget select {
-  max-width: 100%;
-}
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Posts and pages
---------------------------------------------------------------*/
-.sticky {
-  display: block;
-}
-.updated:not(.published) {
-  display: none;
-}
-.page-links {
-  clear: both;
-  margin: 0 0 1.5em;
-}
-/*--------------------------------------------------------------
-## Comments
---------------------------------------------------------------*/
-.comment-content a {
-  word-wrap: break-word;
-}
-.bypostauthor {
-  display: block;
-}
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-  /* Theme Footer (when set to scrolling) */
-  display: none;
-}
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-.infinity-end.neverending .site-footer {
-  display: block;
-}
-/*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
-.page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0;
-}
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
 object {
   max-width: 100%;
-}
-/* Make sure logo link wraps around logo image. */
-.custom-logo-link {
-  display: inline-block;
 }
 /*--------------------------------------------------------------
 ## Captions
@@ -712,47 +490,105 @@ object {
 .wp-caption-text {
   text-align: center;
 }
-/*--------------------------------------------------------------
-## Galleries
---------------------------------------------------------------*/
-.gallery {
-  margin-bottom: 1.5em;
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
 }
-.gallery-item {
-  display: inline-block;
-  text-align: center;
-  vertical-align: top;
-  width: 100%;
-}
-.gallery-columns-2 .gallery-item {
-  max-width: 50%;
-}
-.gallery-columns-3 .gallery-item {
-  max-width: 33.33%;
-}
-.gallery-columns-4 .gallery-item {
-  max-width: 25%;
-}
-.gallery-columns-5 .gallery-item {
-  max-width: 20%;
-}
-.gallery-columns-6 .gallery-item {
-  max-width: 16.66%;
-}
-.gallery-columns-7 .gallery-item {
-  max-width: 14.28%;
-}
-.gallery-columns-8 .gallery-item {
-  max-width: 12.5%;
-}
-.gallery-columns-9 .gallery-item {
-  max-width: 11.11%;
-}
-.gallery-caption {
+.screen-reader-text:focus {
+  outline: 3px dotted #FFC700;
+  background-color: #fff;
+  clip: auto !important;
+  -webkit-clip-path: none;
+          clip-path: none;
+  color: #CC4B00;
   display: block;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+}
+/* Layout */
+/* Colours */
+/* Breakpoints */
+.container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: auto;
+  max-width: 1100px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.site-main {
+  display: block;
+  margin: 20px auto;
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptug8zYS_SKggPN-Co.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Raleway Medium'), local('Raleway-Medium'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwN4raqE.ttf) format('truetype');
+}
+body {
+  color: #333333;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+h1 {
+  font-size: 1.3em;
+}
+h2 {
+  font-size: 2.6em;
+  font-weight: 400;
+  line-height: 1.2em;
+}
+.main-navigation a {
+  font-size: 1.28em;
+  line-height: 1.15em;
 }
 .blog article {
   margin: 20px 0;
+}
+.blog article:first-child {
+  margin-top: 0;
+}
+.blog article:last-child {
+  margin-bottom: 0;
 }
 .blog article a {
   color: #CC4B00;
@@ -866,41 +702,10 @@ object {
     padding: 0 20px;
   }
 }
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptug8zYS_SKggPN-Co.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: local('Raleway Medium'), local('Raleway-Medium'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwN4raqE.ttf) format('truetype');
-}
-body {
-  color: #333333;
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
-}
-h1,
-h2,
-h3 {
-  margin: 0;
-}
-h1 {
-  font-size: 1.3em;
-}
-h2 {
-  font-size: 2.6em;
-  font-weight: 400;
-  line-height: 1.2em;
-}
-.main-navigation a {
-  font-size: 1.28em;
-  line-height: 1.15em;
+.site-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 .site-header a {
   color: #fff;
@@ -920,6 +725,7 @@ h2 {
 }
 .site-header .header-wrapper .site-branding .site-title {
   text-align: center;
+  margin: 0;
 }
 .site-header .header-wrapper .site-branding .site-title a {
   margin: 0 auto;
@@ -947,6 +753,10 @@ h2 {
   -o-transition: background-color 0.4s;
   transition: background-color 0.4s;
   width: 60px;
+}
+.site-header .header-wrapper .menu-toggle:focus {
+  outline: 3px dotted #FFC700;
+  outline-offset: -3px;
 }
 .site-header .header-wrapper .menu-toggle .hamburger-menu {
   background-color: #fff;
@@ -1004,6 +814,10 @@ h2 {
   height: auto;
   max-height: 0;
   overflow: hidden;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  visibility: hidden;
 }
 .site-header .main-navigation ul li {
   background-color: #004EAE;
@@ -1014,6 +828,7 @@ h2 {
 .site-header .main-navigation ul li a {
   padding: 20px;
   text-decoration: underline;
+  display: block;
 }
 .site-header .main-navigation ul li a:focus {
   outline: 3px dotted #FFC700;
@@ -1037,6 +852,7 @@ h2 {
 }
 .site-header.toggled .main-navigation ul {
   max-height: 100vh;
+  visibility: visible;
 }
 .site-header.toggled .menu-toggle {
   background-color: #004EAE;
@@ -1059,6 +875,9 @@ h2 {
           transform: rotate(-45deg);
 }
 @media only screen and (min-width: 600px) {
+  .site-header .header-wrapper .menu-toggle {
+    display: none;
+  }
   .site-header .header-wrapper .site-branding {
     position: relative;
   }
@@ -1093,6 +912,8 @@ h2 {
   }
   .site-header .main-navigation .container ul {
     max-height: 100vh;
+    display: block;
+    visibility: visible;
   }
   .site-header .main-navigation .container ul li {
     border-bottom: none;
