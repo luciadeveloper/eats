@@ -1,0 +1,130 @@
+.blog {
+    
+    article {
+        margin:20px 0;
+       
+        a {
+            color:@secondary;
+       
+            &.read-more {
+                display: flex;
+                width: fit-content;
+              
+                &:focus {
+                    .special-focus(@secondary)  
+                }
+       
+                svg {
+                    fill:@secondary;
+                    transition: margin-left 0.2s;
+                }
+
+                &:hover svg {
+                    margin-left:3px;
+                    transition: margin-left 0.2s;
+                }
+            }
+           
+        }
+ 
+        .article-image-wrapper {
+           
+            a {
+                line-height: 0;
+                display:block;
+                
+                &:focus {
+                    .special-focus(@secondary)  
+                }
+         
+                &:hover img {
+                    opacity: 0.95;
+                }
+            }
+        }
+
+        .article-content-wrapper {
+        
+            .entry-header {
+                margin-top: 10px;
+            
+                .entry-title {
+                    a {
+                        display: block;
+                        
+                        &:focus {
+                            .special-focus(@secondary)  
+                        }
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+                .entry-meta {
+                
+                    time {
+                        color: @gray;
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+@media only screen and (min-width: @small) {
+
+    .blog {
+
+        article {
+            display:flex;
+            
+            .article-image-wrapper, .article-content-wrapper {
+                flex-basis: 0;
+                flex-direction: column;
+                padding: 0;
+                flex: 1 0 0;
+            }
+            
+            .article-image-wrapper {
+                flex-grow: 2;
+                a {
+                    height: 100%;
+                
+                    picture {
+                        align-items: flex-start;
+                        display: flex;
+                        height: 100%;
+                        justify-content: left;
+                        min-height:380px;
+                        position: relative;
+                    
+                        img {
+                            height: 100%;
+                            left: 0;
+                            object-fit: cover;
+                            object-position: center;
+                            position: absolute;
+                            top: 0;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            
+            .article-content-wrapper {
+                flex-grow: 1;
+                padding:0 20px;
+               
+               
+            }
+           
+            
+        }
+    }
+
+}
