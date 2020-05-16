@@ -947,18 +947,6 @@ h2 {
   -o-transition: background-color 0.4s;
   transition: background-color 0.4s;
   width: 60px;
-  /*
-            svg {
-                margin-left: @padding;
-                &.close {
-                    display: none;
-                }
-                
-               &.open {
-                    display: block;
-                } 
-            }
-            */
 }
 .site-header .header-wrapper .menu-toggle .hamburger-menu {
   background-color: #fff;
@@ -1046,17 +1034,6 @@ h2 {
 }
 .site-header .main-navigation ul li.current-menu-item {
   background-color: #013371;
-}
-.site-header.toggled {
-  /*
-        .close {
-            display: block;
-        }
-
-        .open {
-            display: none;
-        }
-        */
 }
 .site-header.toggled .main-navigation ul {
   max-height: 100vh;
