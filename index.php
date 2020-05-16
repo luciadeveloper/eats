@@ -7,16 +7,13 @@ get_header();
         while ( have_posts() ) :
             the_post();
 
-            the_post_thumbnail('blog-thumbnail');
-            the_title();
+            get_template_part( 'template-parts/content', get_post_type() );
 
         endwhile;
 
-        the_posts_navigation();
-
     else :
 
-        "no content";
+        get_template_part( 'template-parts/content', 'none' );
 
     endif;
 ?>
