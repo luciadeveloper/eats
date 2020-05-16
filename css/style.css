@@ -569,8 +569,10 @@ h2,
 h3 {
   margin: 0;
 }
-h1 {
+h1.site-title,
+p.site-title {
   font-size: 1.3em;
+  font-weight: bold;
 }
 h2 {
   font-size: 2.6em;
