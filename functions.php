@@ -16,8 +16,6 @@ if ( ! defined( 'THEME_VERSION' ) ) {
 /**
  * Theme setup.
  */
-
-
 if ( ! function_exists( 'eats_setup' ) ) {
 
     function eats_setup() {
@@ -36,6 +34,9 @@ if ( ! function_exists( 'eats_setup' ) ) {
 
 add_action( 'after_setup_theme', 'eats_setup' );
 
+/**
+ * Create image size
+ */
 add_image_size('blog-thumbnail', 680, 380);
 
 
@@ -49,4 +50,5 @@ function eats_scripts() {
     wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/navigation.js', array(), THEME_VERSION, true );
     
 }
+
 add_action( 'wp_enqueue_scripts', 'eats_scripts' );
