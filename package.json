@@ -1,0 +1,26 @@
+{
+  "name": "eat",
+  "version": "1.0.0",
+  "description": "<!DOCTYPE html> <html lang=\"en\"> <head> \t<meta name=\"viewport\" content=\"width=device-width\" /> \t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /> \t<title>WordPress &#8250; ReadMe</title> \t<link rel=\"stylesheet\" href=\"wp-admin/css/install.css?ver=20100228\" type=\"text/css\" /> </head> <body> <h1 id=\"logo\"> \t<a href=\"https://wordpress.org/\"><img alt=\"WordPress\" src=\"wp-admin/images/wordpress-logo.png\" /></a> </h1> <p style=\"text-align: center\">Semantic Personal Publishing Platform</p>",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "clean-cache": "^1.0.2",
+    "es6-promise": "^4.2.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-less": "^4.0.1",
+    "gulp-path": "^4.0.0",
+    "jquery-appear-original": "^0.6.2",
+    "less": "^3.10.0",
+    "less-watch-compiler": "^1.14.6",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "gulp-clean-css": "^4.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
