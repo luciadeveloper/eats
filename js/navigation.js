@@ -8,16 +8,15 @@
 	var sitenavigation, button, menu, links, i, len, header;
 
 	header = document.getElementById( 'masthead' );
-
     sitenavigation = document.getElementById( 'site-navigation' );
 
 	if ( ! sitenavigation ) {
 		return;
     }
     
-
 	button = document.getElementById( 'menu-toggle' );
-	if ( 'undefined' === typeof button ) {
+    
+    if ( 'undefined' === typeof button ) {
 		return;
 	}
 
@@ -42,7 +41,7 @@
 		}
 	};
 
-	// Close small menu when user clicks outside
+	// Close menu when user clicks outside menu or button
 	document.addEventListener( 'click', function( event ) {
 		var isClickInside = sitenavigation.contains( event.target );
 		var isClickInsideButton = button.contains( event.target );
@@ -52,19 +51,28 @@
 		}
 	} );
 
-	//close menu when Esc key is pressed. 
-	document.addEventListener('keyup', (event) => {
-		if(event.keyCode == 27) {
-			closeMenu(); 
-		}
-	});
+    //close menu when Esc key is pressed. 
+    document.addEventListener('keyup', (event) => {
+        if ( -1 !== header.className.indexOf( 'toggled' ) ) {
+            if(event.keyCode == 27) {
+                closeMenu(); 
+            }
+        }
+    });
+    
 
+    /**
+	 * closes menu
+	 */
 	function closeMenu() {
 		header.classList.remove('toggled');	
 		button.setAttribute( 'aria-expanded', 'false' );
 		sitenavigation.setAttribute( 'aria-expanded', 'false' );	
 	} 
 
+    /**
+	 * Opens menu
+	 */
 	function openMenu() {
 		header.className += ' toggled';
 		button.setAttribute( 'aria-expanded', 'true' );
@@ -102,7 +110,7 @@
 	}
 
 	/**
-	 * Toggles `focus` class to allow submenu access on tablets.
+	 * Toggles focus class to allow submenu access on tablets.
 	 */
 	( function() {
 		var touchStartFn,
