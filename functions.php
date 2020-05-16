@@ -1,4 +1,11 @@
 <?php 
+/**
+ * Eats functions
+ * 
+ * @package eats
+ */
+
+
 
 /**
  * Theme setup.
