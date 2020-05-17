@@ -9,7 +9,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="article-image-wrapper">
-		<a href="<?php echo get_permalink() ?>" tabindex="-1"> <!-- tab index -1 to avoid redundan links-->
+		<a href="<?php echo get_permalink() ?>">
 			<picture>
 				<?php the_post_thumbnail('blog-thumbnail');?>
 				<span class="screen-reader-text"><?php the_title()?> </span>
