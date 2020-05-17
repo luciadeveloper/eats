@@ -12,11 +12,11 @@
 
 	if ( ! sitenavigation ) {
 		return;
-    }
-    
+	}
+
 	button = document.getElementById( 'menu-toggle' );
-    
-    if ( 'undefined' === typeof button ) {
+
+	if ( 'undefined' === typeof button ) {
 		return;
 	}
 
@@ -33,17 +33,17 @@
 	}
 
 	button.onclick = function() {
-		if ( -1 !== header.className.indexOf( 'toggled' ) ) {
-			closeMenu();
+	if ( -1 !== header.className.indexOf( 'toggled' ) ) {
+		closeMenu();
 
-		} else {
-			openMenu()
-		}
+	} else {
+		openMenu()
+	}
 	};
 
 	// Close menu when user clicks outside menu or button
 	document.addEventListener( 'click', function( event ) {
-		var isClickInside = sitenavigation.contains( event.target );
+	var isClickInside = sitenavigation.contains( event.target );
 		var isClickInsideButton = button.contains( event.target );
 
 		if ( ! isClickInside && !isClickInsideButton) {
@@ -51,17 +51,17 @@
 		}
 	} );
 
-    //close menu when Esc key is pressed. 
-    document.addEventListener('keyup', (event) => {
-        if ( -1 !== header.className.indexOf( 'toggled' ) ) {
-            if(event.keyCode == 27) {
-                closeMenu(); 
-            }
-        }
-    });
-    
+	//close menu when Esc key is pressed. 
+	document.addEventListener('keyup', (event) => {
+		if ( -1 !== header.className.indexOf( 'toggled' ) ) {
+			if(event.keyCode == 27) {
+				closeMenu(); 
+			}
+		}
+	});
 
-    /**
+
+	/**
 	 * closes menu
 	 */
 	function closeMenu() {
@@ -70,7 +70,7 @@
 		sitenavigation.setAttribute( 'aria-expanded', 'false' );	
 	} 
 
-    /**
+	/**
 	 * Opens menu
 	 */
 	function openMenu() {
