@@ -33,12 +33,12 @@
 	}
 
 	button.onclick = function() {
-	if ( -1 !== header.className.indexOf( 'toggled' ) ) {
-		closeMenu();
+		if ( -1 !== header.className.indexOf( 'toggled' ) ) {
+			closeMenu();
 
-	} else {
-		openMenu()
-	}
+		} else {
+			openMenu()
+		}
 	};
 
 	// Close menu when user clicks outside menu or button
