@@ -15,10 +15,9 @@
  - PHP
 
  - Reseting CSS based on https://necolas.github.io/normalize.css/
- - Test on browsers: Safari, Chrome, Firefox, Edge and IE. 
- - Test on devices: iPhone and Android. 
- ( Using BrowserStack and real devices)
- - Test on Axe and Wave and Lighthouse for Accessibility and performance. 
+ - Test on lastest versions of the browsers: Safari, Chrome, Firefox, Edge and IE. ( Using BrowserStack and real devices)
+ - Test on devices: iPhone and Android. ( Using BrowserStack and real devices)
+ - Test with Axe, Wave and Lighthouse tools for Accessibility and performance. 
  - Keyboard accessible. 
 
  - Gulp autoprefixer and minify-css.  
