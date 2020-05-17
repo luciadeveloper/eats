@@ -425,18 +425,6 @@ table {
   width: 100%;
 }
 /*--------------------------------------------------------------
-## Links
---------------------------------------------------------------*/
-:focus,
-a:focus,
-.focus {
-  outline-color: #CC4B00;
-}
-/* Do not show the outline on the skip link target. */
-#content[tabindex="-1"]:focus {
-  outline: 0;
-}
-/*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
 .clear:before,
@@ -490,6 +478,15 @@ object {
 .wp-caption-text {
   text-align: center;
 }
+:focus,
+a:focus,
+.focus {
+  outline-color: #CC4B00;
+}
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}
 /* Text meant only for screen readers. */
 .screen-reader-text {
   border: 0;
@@ -524,6 +521,7 @@ object {
 }
 /* Layout */
 /* Colours */
+/* Fonts */
 /* Breakpoints */
 .container {
   -webkit-box-sizing: border-box;
