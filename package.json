@@ -6,7 +6,7 @@
   "dependencies": {
     "clean-cache": "^1.0.2",
     "es6-promise": "^4.2.8",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-less": "^4.0.1",
     "gulp-path": "^4.0.0",
